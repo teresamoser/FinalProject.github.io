@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    }
+  body {
+    margin: 0;
+    width: 100%;
+    background: url ("wdd330/FinalProject/images/Stars2.webp")no-repeat center center;
+    background-size: cover;
+    font-family: 'Anonymous Pro';
+    }
+  #title {
+    display: grid;
+    grid-template-columns: auto 52px;
+    color:white;
+    text-align: center;
+    padding: 1rem;
+    position: relative; 
+    height: 200px;
+    }
+   
+/* BACKGROUND IMAGE CSS */  
+  #bgimage {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+/* BACKGROUND IMAGE CSS ENDS */
+
+/* CSS FOR PLANETS API */
+  html,body{
+    height: 100%;
+    width: 100%;
+  }
+  #container{
+    margin: auto;
+  }
+  #planet-container {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+  }
+  #header-container {
+    border-radius: 0px !important;
+  }
+  #header-text{
+    margin: 0 auto;
+    background:rgb(4, 4, 4);
+    color: white;
+    border-radius: 25px;
+    padding: 1rem; 
+  }
+  #generate-planet {
+    margin: 0 auto;
+    background:rgb(4, 4, 4);
+    color: white;
+    border-radius: 25px;
+    padding: 1rem; 
+    font-size: large;
+  }
+  #delete-btn {
+    position: absolute;
+    left: 85%;
+    display: none;
+    margin-bottom: 5%;
+    font-size: large;
+  }
+  /* END CSS FOR PLANETS API */
+    
+  /* SECTIONS CSS */
+   section {
+    color: black;;
+    padding: 1rem;
+    text-align: center;
+    border-color:rgb(13, 12, 12);
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    gap: 1.5rem;
+    background:white;
+    position: relative; 
+    }
+  h2 {
+    background:rgb(4, 4, 4);
+    color: white;
+    border-radius: 25px;
+    padding: 1rem; 
+    }
+  .card1 h2 {
+    text-align: center;
+    }
+  .card2 {
+    text-align: center;
+    gap: 1.5rem;
+    }
+  .card1, .card2 {
+    color: black;;
+    padding: 1rem;
+    border-color:rgb(3, 3, 3);
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    text-align: center;
+    gap: 3rem;
+    background:rgb(240, 239, 238);
+    grid-row: 2;
+    font-size: large;
+    position: relative;
+    } 
+    /*SECTIONS CSS END */
+ 
+    /* WEATHER API*/
+ .card {  
+    color: rgb(250, 248, 248);
+    padding: 1rem;
+    border-color:rgb(10, 10, 10);
+    border-style: solid;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background:rgb(38, 82, 114);
+    text-align: center;
+    font-size: large;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    }
+  #graphic {
+    background-color:rgb(42, 155, 177);
+    margin: 0 0 1rem 1rem;
+    border: 1px solid #070707;
+    box-shadow: 0 0 15px #070707;
+    } 
+    /* END WEATHER API */
+  
+  /* VISITS PER PAGE */
+  p {
+    margin: 1rem;
+    }
+  .label {
+    font-family: 'Anonymous Pro';
+    font-weight: 700;
+    }
+  .visits {
+    color: rgb(36, 72, 172);
+    font-weight: 800;
+    font-size: large;
+    }
+  /* END VISITS PER PAGE */
+
+ /* END MAIN SECTION */
+  footer {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    font-family: 'Anonymous Pro';
+    font-size: large;
+    grid-column: 1/2;
+    }
+

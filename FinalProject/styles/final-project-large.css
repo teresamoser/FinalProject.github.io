@@ -1,0 +1,20 @@
+/* CSS LARGE SIZE */
+@media only screen and (max-width: 1024px){
+    header {
+        grid-template-columns: auto auto;
+    }   
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        margin: 0;
+        gap: 2rem;
+        grid-template-rows: 2fr;  
+    }
+    .card1, .card2, .card3, .card4 {
+        text-align: center;
+    }
+    .googlemap{
+        max-width: 1024px;
+    }
+
+  }
