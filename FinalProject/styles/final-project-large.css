@@ -16,5 +16,11 @@
     .googlemap{
         max-width: 1024px;
     }
+    div#planet-container.ui.card{
+        grid-template-columns: 1fr 1fr;
+        
+        
+    
+      }
 
   }

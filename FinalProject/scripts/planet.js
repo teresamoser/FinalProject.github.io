@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 function renderEverything(){
     let allPlanetContainer = document.querySelector("#planet-container");
     allPlanetContainer.innerText = "";
-    fetchMoserPlanet();
+    fetchPlanetURL();
 
     getDeleteBtn().style.display = "block";
     }
@@ -24,7 +24,7 @@ function getDeleteBtn(){
     return document.querySelector("#delete-btn");
     }
 
-// CODE FROM PLANETS API
+// CODE FROM PLANETS APIf
 const options = {
 	method: 'GET',
 	headers: {
@@ -40,7 +40,7 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     //END OF CODE FROM API
 
     //CALL THE PLANET API USING KEY FROM RAPIDAPI PLANETS
-function fetchMoserPlanet(){
+function fetchPlanetURL(){
     fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/',{
       'method': 'GET',
       'headers': {
@@ -51,18 +51,9 @@ function fetchMoserPlanet(){
     .then(response => response.json())
     .then(function(allplanet){
         allplanet.forEach(function(planet){
-          fetchPlanetData(planet);
+          renderPlanet(planet);
           });
       });
-    }
-  
-function fetchPlanetData(planet){
-    let planetData = planet   // <--- this is saving the PLANET url to a variable to use in the fetch. 
-      fetch(planetData)
-      .then(response => response.json())
-      .then(function(planetData){ 
-          renderPlanet(planetData);
-      })
     }
 
     //SET UP THE ELEMENTS IN THE HTML FOR PLANETS DATA RECEIVED
@@ -71,27 +62,27 @@ function renderPlanet(planetData){
     let planetContatiner = document.createElement("div");  // div will be used to hold the data/details for individual planets.
     planetContatiner.classList.add("ui", "card");
 
-    createPlanetImage(planetData.planetOrder, planetContatiner);
+    createPlanetImage(planetData, planetData.planetOrder, planetContatiner);
 
     let planetName = document.createElement("h4");
-    planetName.innerText = planetData.name;
+    planetName.innerText = `Name: ${planetData.name}`;
 
     let planetOrder = document.createElement("p");
-    planetOrder.innerText = `#${planetData.planetOrder}`;
+    planetOrder.innerText = `Planet Order: ${planetData.planetOrder}`;
 
     let planetDescription = document.createElement("p");
-    planetDescription.innerText = `#${planetData.description}`;
+    planetDescription.innerText = `Description: ${planetData.description}`;
 
     let planetVolume = document.createElement("p");
-    planetVolume.innerText = `#${planetData.volume}`;
+    planetVolume.innerText = `Volume: ${planetData.basicDetails.volume}`;
 
     let planetMass = document.createElement("p");
-    planetMass.innerText = `#${planetData.mass}`;
+    planetMass.innerText = `Mass: ${planetData.basicDetails.mass}`;
 
     let planetTypes = document.createElement("ul") ;
       //UL LIST WILL HOLD THE PLANET TYPES
 
-    createTypes(planetData.types, planetTypes);
+//    createTypes(planetData.types, planetTypes);
       //HELPER FUNCTION TO GO THROUGH THE TYPES ARRAY AND CREATE LI TAGS FOR EACH ONE
     
     planetContatiner.append(planetName, planetOrder, planetDescription, planetVolume, planetMass, planetTypes);
@@ -111,12 +102,15 @@ function createTypes(types, ul){
     })
 }
     //PULL IMAGE FROM PLANET API 
-function createPlanetImage(planetOrder, containerDiv){
+function createPlanetImage(planetData, planetOrder, containerDiv){
     let planetImgContainer = document.createElement("div");
     planetImgContainer.classList.add("image");
 
     let planetImage = document.createElement("img");
-    planetImage.srcset = `#${planetData.img}`;
+    planetImage.src = `${planetData.imgSrc.img}`;
+
+    let planetImgDescription = document.createElement("p");
+    planetImgDescription = `Image Description: ${planetData.imgSrc.imgDescription}`;
 
     planetImgContainer.append(planetImage);
     containerDiv.append(planetImgContainer); 

@@ -68,6 +68,16 @@
     margin-bottom: 5%;
     font-size: large;
   }
+  div.ui.card{
+    height: auto;
+    width: auto;
+    text-align: left;
+  }
+  .image img{
+    width: 200px;
+    height: 200px;
+
+  }
   /* END CSS FOR PLANETS API */
     
   /* SECTIONS CSS */
