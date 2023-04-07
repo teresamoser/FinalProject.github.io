@@ -63,8 +63,8 @@ function renderPlanet(planetData){
     planetContatiner.classList.add("ui", "card");
 
     createPlanetImage(planetData, planetData.planetOrder, planetContatiner);
-
-    let planetName = document.createElement("h4");
+    
+    let planetName = document.createElement("h3");
     planetName.innerText = `Name: ${planetData.name}`;
 
     let planetOrder = document.createElement("p");
@@ -91,16 +91,8 @@ function renderPlanet(planetData){
     allPlanetContainer.appendChild(planetContatiner); 
       //APPENDING THE PLANETCONTAINER DIV TO THE MAIN DIV 
       //WHICH WILL HOLD ALL THE PLANET CARDS
-
-}   
-     //TYPES ARE LISTED UNDER PLANET IMAGE
-function createTypes(types, ul){
-    types.forEach(function(type){
-        let typeLi = document.createElement("li");
-        typeLi.innerText = type["type"]["name"];
-        ul.append(typeLi);
-    })
 }
+
     //PULL IMAGE FROM PLANET API 
 function createPlanetImage(planetData, planetOrder, containerDiv){
     let planetImgContainer = document.createElement("div");
