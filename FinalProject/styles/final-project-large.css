@@ -3,24 +3,14 @@
     header {
         grid-template-columns: auto auto;
     }   
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        margin: 0;
-        gap: 2rem;
-        grid-template-rows: 2fr;  
+   #planet-container.ui.card {
+    flex: 50%;
+    padding: 10px;
+
     }
-    .card1, .card2, .card3, .card4 {
+    .card1, .card2 {
         text-align: center;
     }
-    .googlemap{
-        max-width: 1024px;
-    }
-    div#planet-container.ui.card{
-        grid-template-columns: 1fr 1fr;
-        
-        
-    
-      }
+ 
 
   }
