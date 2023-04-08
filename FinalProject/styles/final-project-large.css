@@ -11,6 +11,10 @@
     .card1, .card2 {
         text-align: center;
     }
- 
-
-  }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        margin: 0;
+        gap: 1rem;  
+    }
+ }

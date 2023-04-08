@@ -44,6 +44,8 @@
     content: "";
     display: table;
     clear: both;
+
+    
   }
   #header-container {
     border-radius: 0px !important;
@@ -89,10 +91,11 @@
     text-align: left;
   }
   .image img{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
   }
-
+  
   /* END CSS FOR PLANETS API */
     
   /* SECTIONS CSS */
@@ -133,6 +136,7 @@
     background:rgb(240, 239, 238);
     font-size: large;
     } 
+    
     /*SECTIONS CSS END */
  
     /* WEATHER API*/

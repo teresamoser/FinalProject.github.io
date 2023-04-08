@@ -61,12 +61,12 @@ function renderPlanet(planetData){
     let allPlanetContainer = document.getElementById("planet-container");
     let planetContatiner = document.createElement("div");  // div will be used to hold the data/details for individual planets.
     planetContatiner.classList.add("ui", "card");
+    
+    let planetName = document.createElement("h2");
+    planetName.innerText = `Planet Name: ${planetData.name}`;
 
     createPlanetImage(planetData, planetData.planetOrder, planetContatiner);
     
-    let planetName = document.createElement("h3");
-    planetName.innerText = `Name: ${planetData.name}`;
-
     let planetOrder = document.createElement("p");
     planetOrder.innerText = `Planet Order: ${planetData.planetOrder}`;
 
@@ -79,18 +79,12 @@ function renderPlanet(planetData){
     let planetMass = document.createElement("p");
     planetMass.innerText = `Mass: ${planetData.basicDetails.mass}`;
 
-    let planetTypes = document.createElement("ul") ;
-      //UL LIST WILL HOLD THE PLANET TYPES
-
-//    createTypes(planetData.types, planetTypes);
-      //HELPER FUNCTION TO GO THROUGH THE TYPES ARRAY AND CREATE LI TAGS FOR EACH ONE
-    
-    planetContatiner.append(planetName, planetOrder, planetDescription, planetVolume, planetMass, planetTypes);
+    planetContatiner.append(planetName, planetOrder, planetDescription, planetVolume, planetMass);
       //APPENDING ALL DETAILS TO THE PLANETCONTAINER DIV
 
     allPlanetContainer.appendChild(planetContatiner); 
       //APPENDING THE PLANETCONTAINER DIV TO THE MAIN DIV 
-      //WHICH WILL HOLD ALL THE PLANET CARDS
+          //WHICH WILL HOLD ALL THE PLANET CARDS
 }
 
     //PULL IMAGE FROM PLANET API 
