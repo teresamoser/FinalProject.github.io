@@ -42,10 +42,6 @@
     margin: auto;
     padding: 10px;
     content: "";
-    display: table;
-    clear: both;
-
-    
   }
   #header-container {
     border-radius: 0px !important;
