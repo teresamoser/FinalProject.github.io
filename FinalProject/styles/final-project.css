@@ -45,13 +45,15 @@
   }
   #header-container {
     border-radius: 0px !important;
+    border-color: white;
   }
   #header-text{
     margin: 0 auto;
     background:rgb(4, 4, 4);
     color: white;
     border-radius: 25px;
-    padding: 1rem; 
+    padding: 1rem;
+    background-color:rgb(38, 82, 114); 
   }
   #generate-planet {
     margin: 0 auto;
@@ -71,6 +73,7 @@
     padding: 1rem; 
     font-size: medium;
     font-family: Anonymous Pro;
+    border-color: white;
   }
   button.ui.secondary.button{
     margin: 0 auto;
@@ -80,6 +83,7 @@
     padding: 1rem; 
     font-size: medium;
     font-family: Anonymous Pro;
+    border-color: white;
   }
   div.ui.card{
     height: auto;
@@ -108,7 +112,7 @@
     position: relative; 
     }
   h2 {
-    background:rgb(4, 4, 4);
+    background-color:rgb(38, 82, 114);
     color: white;
     border-radius: 25px;
     padding: 1rem; 
@@ -119,8 +123,6 @@
   .card2 {
     text-align: center;
     gap: 1.5rem;
-    }
-   .card2 {
     color: black;;
     padding: 1rem;
     border-color:rgb(3, 3, 3);
@@ -131,7 +133,12 @@
     gap: 3rem;
     background:rgb(240, 239, 238);
     font-size: large;
-    } 
+    }
+    
+  section.card1, .card2 {
+    background-color: transparent;
+    border-color:snow
+  }
     
     /*SECTIONS CSS END */
  
@@ -139,7 +146,7 @@
  .card {  
     color: rgb(250, 248, 248);
     padding: 1rem;
-    border-color:rgb(10, 10, 10);
+    border-color:rgb(250, 248, 248);
     border-style: solid;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
@@ -165,11 +172,13 @@
   .label {
     font-family: 'Anonymous Pro';
     font-weight: 700;
+    color: white;
     }
   .visits {
-    color: rgb(36, 72, 172);
+    color: white;
     font-weight: 800;
     font-size: large;
+    
     }
   /* END VISITS PER PAGE */
 
@@ -183,4 +192,8 @@
     font-size: large;
     grid-column: 1/2;
     }
+  #shadow-host-companion{
+   background-color:rgb(38, 82, 114);
+   border-color: white;
+  }
 
